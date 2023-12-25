@@ -101,7 +101,7 @@ if DB_IS_AVAILABLE:
     }
 
     if not DB_IGNORE_SSL:
-        DATABASES["default"]["OPTIONS"] = {"sslmode": "required"}
+        DATABASES["default"]["OPTIONS"] = {"sslmode": "require"}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
