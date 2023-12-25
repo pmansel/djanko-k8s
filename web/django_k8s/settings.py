@@ -86,7 +86,7 @@ DB_DATABASE = os.environ.get("POSTGRES_DB")
 DB_HOST = os.environ.get("POSTGRES_HOST")
 DB_PORT = os.environ.get("POSTGRES_PORT")
 DB_IS_AVAILABLE = all([DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_HOST, DB_PORT])
-DB_IGNORE_SSL = os.environ.get("DB_IGNORE_SSL") == "true"
+DB_IGNORE_SSL = str(os.environ.get("DB_IGNORE_SSL")) == "1"
 
 if DB_IS_AVAILABLE:
     DATABASES = {
